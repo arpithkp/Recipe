@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Food list{% endblock %}
+
+{% block content %}
+
+    <p><a href="{% url 'food-list' %}">Back to food list</a></p>
+
+    <p>{{ object.id }}</p>
+    <p>{{ object.name }}</p>
+
+
+
+{%endblock%}
