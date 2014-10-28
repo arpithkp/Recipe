@@ -1,13 +1,16 @@
 # Mac user update brew
 
 cd `brew --prefix`
-git remote add origin https://github.com/mxcl/homebrew.git
-git fetch origin
-git reset --hard origin/master
+
+# install tomcat 6
+git checkout 9e18876 tomcat.rb
 
 # install tomcat
 
 brew install tomcat
+sudo ln -s /usr/local/Cellar/tomcat/6.0.26/libexec /Library/Tomcat
+sudo chmod +x /Library/Tomcat/bin/*.sh
+/Library/Tomcat/bin/startup.sh
 
 # PIP requirements
 
