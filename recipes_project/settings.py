@@ -54,6 +54,9 @@ ROOT_URLCONF = 'recipes_project.urls'
 
 WSGI_APPLICATION = 'recipes_project.wsgi.application'
 
+REST_FRAMEWORK = {
+    'EXCEPTION_HANDLER': 'recipes_project.recipe.utils.custom_exception_handler'
+}
 
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
